@@ -90,6 +90,10 @@
 
 <p>We used RMSE as the performance indicator to compare our models because it's good at measuring the difference between values predicted by a model and the values actually observed. The RMSE punishes large errors or in our case predicting a &lt;=1000k funding bucket when it was actually &lt; 50k.</p>
 
+<p>Another way to compare how our predictions performed would be to bucket the groups of predictions vs actuals. While this could be misleading if our RMSE was high, it showcases the improvement of adding our indicator variables.</p>
+
+<p><img src="./Images/ResultsHistogram.png" alt="Results Histogram"></p>
+
 <h3>
 <a id="conclusion--next-steps" class="anchor" href="#conclusion--next-steps" aria-hidden="true"><span class="octicon octicon-link"></span></a>Conclusion &amp; Next Steps</h3>
 
