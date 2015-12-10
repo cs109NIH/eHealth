@@ -27,7 +27,7 @@
 <h3>
 <a id="motivation" class="anchor" href="#motivation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Motivation</h3>
 
-<p>The National Institutes of Health (NIH), the nation’s medical research agency has paved the way for important discoveries that have improved health and saved lives for centuries.   Approximately 83% of NIH’s $30.3 billion FY 2015 budget goes to more than 300,000 research personnel at over 3,000 universities, medical schools, and other research institutions in every state and throughout the world to support research that turns discovery into health.  One of the challenges faced by NIH is ensuring adequate funding for research associated with emerging health issues.  As the specific work associated with emerging issues is inherently difficult to describe in detail at the time of application, applicants typically describe the process by which they plan to identify, prioritize and address newly arising concerns and respond to them.  This element of uncertainty detracts from NIH’s research priorities.  This problem calls for a more scientific approach to emerging health issues identification and research funding.  We propose a new data science program that identifies emerging health issues and predicts grant funding for related research at some future point in time.  </p>
+<p>The National Institutes of Health (NIH), the nation’s medical research agency has paved the way for important discoveries that have improved health and saved lives for centuries.   Approximately 83% of NIH’s $30.3 billion FY 2015 budget goes to more than 300,000 research personnel at over 3,000 universities, medical schools, and other research institutions in every state and throughout the world to support research that turns discovery into health.  One of the challenges faced by NIH is ensuring adequate funding for research associated with emerging health issues.  As the specific work associated with emerging issues is inherently difficult to describe in detail at the time of application, applicants typically describe the process by which they plan to identify, prioritize and address newly arising concerns and respond to them.  This element of uncertainty detracts from NIH’s research priorities.  This problem calls for a more scientific approach to emerging health issues identification and research funding.  We propose a new data science program that identifies emerging health issues and predicts grant funding for related research.  </p>
 
 <h3>
 <a id="objectives" class="anchor" href="#objectives" aria-hidden="true"><span class="octicon octicon-link"></span></a>Objectives</h3>
@@ -37,7 +37,7 @@
 <ul>
 <li>  What research topics are receiving increased attention? </li>
 <li>  What do grant funding patterns look like and how that translates to emerging health issues?</li>
-<li>  Can we integrate these explanatory variables and the funding patterns into a predictive algorithm that would predict level of funding for emerging health issues research?</li>
+<li>  Can we integrate these explanatory variables and funding patterns into a predictive algorithm that would predict level of funding for emerging health issues research?</li>
 </ul>
 
 <h3>
@@ -68,18 +68,23 @@
 
 <hr>
 
-<p>Today there is no easy way for a grant applicant to determine the level of funding that will be granted to their research.  With the knowledge we gained about the data through the Exploratory data analysis, we attempted to predict grant funding using regression techniques.  We first divided grant funding into bins and created a baseline model using multiple linear regression to predict grant funding as a categorical response.  We then ran ridge and lasso regression models and compared the results of each as displayed below.
-RMSE for baseline 0.901081338038
-RMSE for ridge 0.900670620126
-RMSE for lasso 0.900767208748</p>
+<p>Today there is no easy way for a grant applicant to determine the level of funding that will be granted to their research.  With the knowledge we gained about the data through the Exploratory data analysis, we attempted to predict grant funding using regression techniques.  We first divided grant funding into bins and created a baseline model using multiple linear regression to predict grant funding as a categorical response.  We then ran ridge and lasso regression models and compared the results of each as displayed below.</p>
+
+<p>RMSE for baseline 0.901081338038</p>
+
+<p>RMSE for ridge 0.900670620126</p>
+
+<p>RMSE for lasso 0.900767208748</p>
 
 <p><img src="./Images/CompareResults.png" alt="Comparing Results"></p>
 
-<p>As a next step, we included indicators for the top research categories and reran our regression models.  The results of these regressions are displayed below.  Upon comparison with the results of the regression models with the basic data set, it was apparent that adding the research categorical indicators to our models did not yield any improvement. </p>
+<p>As a next step, we included indicators for the top research categories and reran our regression models.  The results of these regressions are displayed below.  Upon comparison with the results of the regression models with the basic data set, it was apparent that adding the research categorical indicators yielded a slight improvement to our models. </p>
 
-<p>RMSE for baseline-nih 0.895653362145
-RMSE for ridge-nih 0.89531604146
-RMSE for lasso-nih 0.895351127795</p>
+<p>RMSE for baseline-nih 0.895653362145</p>
+
+<p>RMSE for ridge-nih 0.89531604146</p>
+
+<p>RMSE for lasso-nih 0.895351127795</p>
 
 <p><img src="./Images/CompareResultsNIH.png" alt="Comparing Results with NIH Count"></p>
 
